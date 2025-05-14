@@ -10,7 +10,8 @@ window.addEventListener('load', () => {
         cancelButtonText: 'No',
     }).then((result) => {
         if (result.isConfirmed) {
-            document.querySelector('.song').play();
+            const audio = document.getElementById('song');
+            audio.play();
             animationTimeline();
         } else {
             animationTimeline();
